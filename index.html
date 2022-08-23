@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY BOOKSHELF</title>
+    <link rel="shorcut icon" href="assets/logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="css/mybookshelf.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <header>
+      <div class="jumbotron">
+        <h1>MY BOOKSHELF <img src="assets/logo.svg" alt="book" /></h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat.
+        </p>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <div class="search_div">
+          <form id="searchBook">
+            <label for="searchBookTitle"><b>Cari Buku</b></label>
+            <input id="searchBookTitle" type="text" />
+            <button id="searchSubmit" type="submit">Cari</button>
+          </form>
+        </div>
+      </ul>
+    </nav>
+    <main>
+      <div id="content">
+        <section class="card">
+          <div class="container bg-white shadow" id="add-book">
+            <h2 class="container-header text-center">Masukkan Buku</h2>
+            <form class="form" action="#" id="inputBook">
+              <div class="form-group form-title">
+                <label for="title">Judul Buku</label>
+                <input type="text" id="inputBookTitle" name="title" required />
+              </div>
+              <div class="form-group form-title">
+                <label for="penulis">Penulis Buku</label>
+                <input type="text" id="inputBookAuthor" name="author" required />
+              </div>
+              <div class="form-group form-title">
+                <label for="number">Tahun Terbit</label>
+                <input type="number" id="inputBookYear" name="number" required />
+              </div>
+              <div class="form-completed">
+                <label for="finish">Selesai Baca</label>
+                <input type="checkbox" name="completed" id="completed" />
+              </div>
+              <input type="submit" value="Submit" name="Submit" class="btn-submit" />
+            </form>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="container bg-white">
+            <div classs="container" class="listBook">
+              <h2 class="container-header" id="belum">Belum Selesai dibaca</h2>
+              <div class="list-item" id="uncompletedBooks"></div>
+            </div>
+            <div class="listBook">
+              <h2 class="container-header" id="selesai">Selesai dibaca</h2>
+              <div class="list-item" id="completedBooks"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="div-edit" hidden>
+        <div class="edit-form">
+          <button id="closeForm" type="button">X</button>
+          <form id="edit-book">
+            <h3>Edit Buku</h3>
+            <div class="form-group form-title">
+              <label for="editBookTitle">Judul Buku</label>
+              <input id="editBookTitle" type="text" name="title" required />
+            </div>
+            <div class="form-group form-title">
+              <label for="editBookAuthor">Penulis Buku</label>
+              <input id="editBookAuthor" type="text" name="author" required />
+            </div>
+            <div class="form-group form-title">
+              <label for="editBookYear">Tahun Terbit</label>
+              <input id="editBookYear" type="number" name="number" required />
+            </div>
+            <div class="form-completed">
+              <label for="editCompleted">Selesai Baca</label>
+              <input id="editCompleted" type="checkbox" name="completed" />
+            </div>
+            <input type="submit" value="Edit" name="Submit" id="edit-submit" />
+          </form>
+        </div>
+      </div>
+
+      <aside>
+        <section class="profile card">
+          <header>
+            <h2>Halo Yeorobun!</h2>
+            <figure>
+              <img src="assets/jenniekim.png" />
+            </figure>
+          </header>
+          <section class="bio">
+            <h4>Selamat datang di My Bookshelf!</h4>
+            <p>
+              Silahkan masukkan data buku yang ingin anda baca. <br />
+              <br />
+              Atau melihat daftar buku : <br />
+              <br />
+              <span class="seeBook">
+                <button><a href="#belum">Belum selesai</a></button>
+                <button><a href="#selesai">Selesai baca</a></button>
+              </span>
+            </p>
+          </section>
+        </section>
+      </aside>
+    </main>
+    <footer>
+      <p>Nurul Fadilah P &#169; 2022, Dicoding Submission Belajar Membuat Front-End Web untuk Pemula</p>
+    </footer>
+
+    <script src="js/mybookshelf.js" type="text/javascript"></script>
+  </body>
+</html>
