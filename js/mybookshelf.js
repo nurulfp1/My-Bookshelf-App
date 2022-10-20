@@ -274,22 +274,23 @@ function searchBooks() {
   const bookList = document.querySelectorAll(".inner");
   for (render of bookList) {
     if (render.innerText.toLowerCase().includes(titleBook) === false) {
-      render.parentElement.remove();
-    }
-  }
-}
-
-/**function searchBooks() {
-  const titleBook = document.getElementById("searchBookTitle").value.toLowerCase();
-  const bookList = document.querySelectorAll(".inner");
-  for (render of bookList) {
-    if (render.innerText.toLowerCase().includes(titleBook) === false) {
       render.parentElement.style.display = "none";
     } else {
       render.parentElement.style.display = "block";
     }
   }
-}**/
+}
+
+// function searchBooks() {
+//   const titleBook = document.getElementById("searchBookTitle").value.toLowerCase();
+//   const bookList = document.querySelectorAll(".inner");
+//   for (render of bookList) {
+//     if (render.innerText.toLowerCase().includes(titleBook) === false) {
+//       render.parentElement.remove();
+//     }
+//   }
+// }
+
 
 document.addEventListener(RENDER_EVENT, function () {
   const uncompletedBOOKList = document.getElementById("uncompletedBooks");
